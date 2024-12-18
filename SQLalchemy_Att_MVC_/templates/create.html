@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<div class="users">
+
+    <form action="{{url_for('user.create')}}" method="post">
+        <input type="email" name="email" placeholder="Email" value="{{request.form['email']}}">
+          
+        <input type="password" name="password" placeholder="Senha">
+        <button>Enviar</button>
+    </form>
+
+</div>
+    
+{% endblock %}
