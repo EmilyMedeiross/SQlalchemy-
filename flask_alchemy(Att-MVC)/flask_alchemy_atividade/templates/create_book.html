@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Livros</title>
+</head>
+<body>
+    <div class="books">
+
+        <form action="{{url_for('book.create_book')}}" method="post">
+
+            <input type="text" name="titulo" placeholder="Titulo" value="{{request.form['titulo']}}">
+              
+            <input type="text" name="autor" placeholder="Autor">
+
+            <button>Enviar</button>
+        </form>
+    
+    </div>
+</body>
+</html>
