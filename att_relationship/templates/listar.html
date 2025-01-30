@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Tudo</title>
+</head>
+<body>
+    <h1>Clientes</h1>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nome }} - {{ cliente.cpf }} - {{ cliente.telefone }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Veículos</h1>
+    <ul>
+        {% for veiculo in veiculos %}
+            <li>{{ veiculo.marca }} {{ veiculo.modelo }} - {{ veiculo.ano }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Locações</h1>
+    <ul>
+        {% for locacao in locacoes %}
+            <li>{{ locacao.cliente }} alugou {{ locacao.veiculo }} em {{ locacao.data_locacao }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Locação</title>
+</head>
+<body>
+    <h1>Realizar Locação</h1>
+    <form method="POST">
+        <label for="cliente_id">Cliente:</label>
+        <select id="cliente_id" name="cliente_id" required>
+            {% for cliente in clientes %}
+                <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="veiculo_id">Veículo:</label>
+        <select id="veiculo_id" name="veiculo_id" required>
+            {% for veiculo in veiculos %}
+                <option value="{{ veiculo.id }}">{{ veiculo.marca }} {{ veiculo.modelo }}</option>
+            {% endfor %}
+        </select><br><br>
+        <button type="submit">Realizar Locação</button>
+    </form>
+    <a href="/">Voltar</a>
+</body>
+</html>
